@@ -1,0 +1,139 @@
+B>a:r circ-que.c
+
+READ V-2.24 (12-Jun-10) SIMH Interface V005
+Read from "CIRC-QUE.C" and write to "CIRC-QUE.C".
+Previous file of same name deleted.
+2.375kB written.
+
+B>cc circ-que
+BD Software C Compiler v1.60  (part I)
+  34K elbowroom
+BD Software C Compiler v1.60 (part II)
+  32K to spare
+B>clink circ-que
+BD Software C Linker   v1.60
+
+Last code address: 1E68 
+Externals start at 1E69, occupy 001E bytes, last byte at 1E86 
+Top of memory: E705 
+Stack space: C87F 
+Writing output...
+  42K link space remaining
+B>circ-que
+
+
+
+
+
+ ***** MAIN MENU *****
+ 1. Insert an element
+ 2. Delete an element
+ 3. Peek
+ 4. Display the queue
+ 5. EXIT
+ Enter your option : 1
+
+ Enter the number to be inserted in the queue : 5
+
+
+
+ ***** MAIN MENU *****
+ 1. Insert an element
+ 2. Delete an element
+ 3. Peek
+ 4. Display the queue
+ 5. EXIT
+ Enter your option : 1
+
+ Enter the number to be inserted in the queue : 3
+
+
+
+ ***** MAIN MENU *****
+ 1. Insert an element
+ 2. Delete an element
+ 3. Peek
+ 4. Display the queue
+ 5. EXIT
+ Enter your option : 1
+
+ Enter the number to be inserted in the queue : 8
+
+
+
+ ***** MAIN MENU *****
+ 1. Insert an element
+ 2. Delete an element
+ 3. Peek
+ 4. Display the queue
+ 5. EXIT
+ Enter your option : 1
+
+ Enter the number to be inserted in the queue : 2
+
+
+
+ ***** MAIN MENU *****
+ 1. Insert an element
+ 2. Delete an element
+ 3. Peek
+ 4. Display the queue
+ 5. EXIT
+ Enter your option : 3
+
+ The first value in queue is : 5
+
+
+ ***** MAIN MENU *****
+ 1. Insert an element
+ 2. Delete an element
+ 3. Peek
+ 4. Display the queue
+ 5. EXIT
+ Enter your option : 4
+
+         5       3       8       2
+
+
+ ***** MAIN MENU *****
+ 1. Insert an element
+ 2. Delete an element
+ 3. Peek
+ 4. Display the queue
+ 5. EXIT
+ Enter your option : 2
+
+ The number deleted is : 5
+
+
+ ***** MAIN MENU *****
+ 1. Insert an element
+ 2. Delete an element
+ 3. Peek
+ 4. Display the queue
+ 5. EXIT
+ Enter your option : 2
+
+ The number deleted is : 3
+
+
+ ***** MAIN MENU *****
+ 1. Insert an element
+ 2. Delete an element
+ 3. Peek
+ 4. Display the queue
+ 5. EXIT
+ Enter your option : 2
+
+ The number deleted is : 8
+
+
+ ***** MAIN MENU *****
+ 1. Insert an element
+ 2. Delete an element
+ 3. Peek
+ 4. Display the queue
+ 5. EXIT
+ Enter your option : 5
+
+B>
