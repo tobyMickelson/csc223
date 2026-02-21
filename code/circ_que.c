@@ -6,21 +6,17 @@ void insert(void);
 int delete_element(void);
 int peek(void);
 void display(void);
+void menu(void);
 
 int main() {
   front = -1;
   rear = -1;
-  printf("\n\n");
+  printf("\n");
   int option, val;
+  menu();
   do {
-    printf("\n\n\n ***** MAIN MENU *****");
-    printf("\n 1. Insert an element");
-    printf("\n 2. Delete an element");
-    printf("\n 3. Peek");
-    printf("\n 4. Display the queue");
-    printf("\n 5. EXIT");
-    printf("\n Enter your option : ");
-    scanf("%d", &option);
+    printf("Enter your option : ");
+    scanf("%d\n", &option);
     switch (option) {
       case 1:
         insert();
@@ -28,19 +24,20 @@ int main() {
       case 2:
         val = delete_element();
         if (val != -1)
-          printf("\n The number deleted is : %d", val);
+          printf("The number deleted is : %d\n", val);
         break;
       case 3:
         val = peek();
         if (val != -1)
-          printf("\n The first value in queue is : %d", val);
+          printf("The first value in queue is : %d\n", val);
         break;
       case 4:
         display();
         break;
-      default:
-        printf("\n INVALID");
       case 5:
+        break;
+      default:
+        menu();
         break;
     }
   } while (option != 5);
@@ -50,10 +47,10 @@ int main() {
 
 void insert() {
   int num;
-  printf("\n Enter the number to be inserted in the queue : ");
-  scanf("%d", &num);
+  printf("Enter the number to be inserted in the queue : ");
+  scanf("%d\n", &num);
   if ((front == 0) && (rear == MAX - 1))
-    printf("\n OVERFLOW");
+    printf("OVERFLOW\n");
   else {
     if ((front == -1) && (rear == -1))
       front = rear = 0;
@@ -68,7 +65,7 @@ void insert() {
 int delete_element() {
   int val;
   if (front == -1 && rear == -1) {
-    printf("\n UNDERFLOW");
+    printf("UNDERFLOW\n");
     return -1;
   }
   val = queue[front];
@@ -86,7 +83,7 @@ int delete_element() {
 
 int peek() {
   if ((front == -1) && (rear == -1)) {
-    printf("\n QUEUE IS EMPTY");
+    printf("QUEUE IS EMPTY\n");
     return -1;
   } else {
     return queue[front];
@@ -95,18 +92,27 @@ int peek() {
 
 void display() {
   int i;
-  printf("\n");
   if ((front == -1) && (rear == -1))
-    printf("\n QUEUE IS EMPTY");
+    printf("QUEUE IS EMPTY\n");
   else {
     if (front < rear) {
       for (i = front; i <= rear; i++)
-        printf("\t %d", queue[i]);
+        printf("%d  ", queue[i]);
     } else {
       for (i = front; i < MAX; i++)
-        printf("\t %d", queue[i]);
+        printf("%d  ", queue[i]);
       for (i = 0; i <= rear; i++)
-        printf("\t %d", queue[i]);
+        printf("%d  ", queue[i]);
     }
+    printf("\n");
   }
+}
+
+void menu() {
+  printf("***** MAIN MENU *****");
+  printf("1. Insert an element");
+  printf("2. Delete an element");
+  printf("3. Peek");
+  printf("4. Display the queue");
+  printf("5. EXIT");
 }
